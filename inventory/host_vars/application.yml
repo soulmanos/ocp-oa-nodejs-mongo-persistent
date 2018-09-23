@@ -1,0 +1,11 @@
+---
+ansible_connection: local
+openshift_cluster_content:
+- object: nodejs-components
+  content:
+  - name: nodejs-ex
+    template: "{{ playbook_dir }}/templates/app/nodejs-mongo-persistent.yml"
+    params: "{{ playbook_dir }}/params/nodejs-mongo-persistent/build"
+    namespace: "{{ nodejs_namespace }}"
+    tags:
+    - app
