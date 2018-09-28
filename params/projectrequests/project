@@ -1,2 +1,2 @@
-NAMESPACE=smoke-test
-NAMESPACE_DISPLAY_NAME="smoke-test nodejs-mongo-example"
+NAMESPACE="{{ project_namespace }}"
+NAMESPACE_DISPLAY_NAME="{{ project_namespace }}"
