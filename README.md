@@ -1,12 +1,14 @@
 ## Using OpenShift-Applier to create a new Project and Deploy an Application
 
+This repository has been updated to use the openshift-ansible master branch from 3.9.0. Updated to make use of the params_from_vars module. The master branch of openshift applier also requires ansible >= 2.5
+
 * Clone this repo
 
 `git clone https://github.com/soulmanos/ocp-oa-nodejs-mongo-persistent.git`  
 
 * Run the ansible-playbook
 
-`ansible-playbook -i inventory apply.yml -e "target=bootstrap,application"`
+ ansible-playbook -i inventory apply.yml -e "project_name=smokey-test target=bootstrap,application"
 
 * Confirm Application reponds with A DB connection established
 
