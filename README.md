@@ -10,6 +10,12 @@ This repository has been updated to use the openshift-ansible master branch from
 
  ansible-playbook -i inventory apply.yml -e "project_name=smokey-test target=bootstrap,application"
 
+* Deploy just a new project using the openshift-applier code
+
+ansible-playbook -i inventory apply.yml -e "project_name=smokey-test target=bootstrap"
+
+> When you're passing the variable `target=bootstrap` you're effectively targeting a node in the `hosts` file
+
 * Confirm Application reponds with A DB connection established
 
 `curl http://nodejs-mongo-persistent-smoke-test.apps.$GUID.example.opentlc.com | grep -A4 'DB Connection Info'`
