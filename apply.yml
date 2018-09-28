@@ -8,7 +8,7 @@
 - name: Deploy {{ target }} 
   hosts: "{{ target }}"
   vars:
-    nodejs_namespace: "smoke-test"
+    nodejs_namespace: "{{ pns }}"
   tasks:
     - include_role:
         name: openshift-applier/roles/openshift-applier
