@@ -8,4 +8,8 @@
 
 `ansible-playbook -i inventory apply.yml -e "target=bootstrap,application"`
 
-* Manual steps can be reproduced from [opensift-applier-example.md](openshift-applier-example.md)
+* Confirm Application reponds with A DB connection established
+
+`curl http://nodejs-mongo-persistent-smoke-test.apps.$GUID.example.opentlc.com | grep -A4 'DB Connection Info'`
+
+* Manual steps can be reproduced from [openshift-applier-example.md](openshift-applier-example.md)
