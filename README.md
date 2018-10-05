@@ -1,5 +1,7 @@
 ## Using OpenShift-Applier to create a new Project and Deploy an Application
 
+Switch to branch Requires-Ansible-2.5 to use the most up-to-date version of this bootstrap
+
 * Clone this repo
 
 `git clone https://github.com/soulmanos/ocp-oa-nodejs-mongo-persistent.git`  
